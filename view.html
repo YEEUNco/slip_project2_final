@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주소록</title>
+    <!-- Bootstrap CSS link for styling -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        
+        .custom-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h1 class="mb-4">주소록</h1>
+
+        <!-- Search Bar -->
+        <div class="mb-4">
+            <input type="text" class="form-control" placeholder="Search...">
+        </div>
+
+        <!-- Add Button -->
+        <button class="btn btn-primary mb-2" id="addBtn">Add New Entry</button>
+
+        <!-- Data Table -->
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>PhoneNum</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample Data Row -->
+                <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>john.doe@example.com</td>
+                    <td>010-1234-5678</td>
+                    <td>
+                        <a href="edit.html" class="btn btn-success btn-sm">Edit</a>
+                        <button class="btn btn-danger btn-sm" onclick="deleteEntry()">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+   
+
+    <script>
+
+        function deleteEntry() {
+            // Confirm deletion
+            var r = confirm("게시물을 삭제할까요?");
+            if (r == true) {
+                // Here, you can add the logic to actually delete the entry
+                console.log('Deleted');
+            }
+        }
+    </script>
+</body>
+
+</html>

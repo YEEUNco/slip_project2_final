@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주소록 등록</title>
+    <!-- Bootstrap CSS link for styling -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+       
+        .custom-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h1 class="mb-4">주소록 등록</h1>
+
+        <!-- Form to Add New Entry -->
+        <form action="/save" method="post" id="addForm" onsubmit="return showAlert()">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phonenum">Phone Num:</label>
+                <input type="text" class="form-control" id="phonenum" name="phonenum" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+            <a href="/" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+
+    
+    <!-- JavaScript function to show alert -->
+    <script>
+        function showAlert() {
+            alert('게시물이 추가되었습니다');
+            return true; // This allows the form submission to continue. Change to 'false' if you want to halt the submission.
+        }
+    </script>
+    <!-- Bootstrap JS for interactive features -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
